@@ -29,6 +29,12 @@ target 'showExpo' do
 
   use_unimodules!
 
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'showExpoTests' do
     inherit! :search_paths
   end
