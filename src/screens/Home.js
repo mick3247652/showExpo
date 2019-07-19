@@ -7,6 +7,14 @@ export default class Home extends Component {
     this.props.navigation.navigate("Map");
   };
 
+  _navigateToCompass = () => {
+    this.props.navigation.navigate("Compass");
+  };
+
+  _navigateToBorsch = () => {
+    this.props.navigation.navigate("Borsch");
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -15,6 +23,18 @@ export default class Home extends Component {
           title="Map"
           type="outline"
           onPress={() => this._navigateToMap()}
+        />
+        <Button
+          containerStyle={styles.button}
+          title="Compass"
+          type="outline"
+          onPress={() => this._navigateToCompass()}
+        />
+        <Button
+          containerStyle={styles.button}
+          title="Borsch"
+          type="outline"
+          onPress={() => this._navigateToBorsch()}
         />
       </View>
     );

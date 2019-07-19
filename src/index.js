@@ -2,6 +2,8 @@ import React from "react";
 import MapScreen from "./screens/Map";
 import HomeScreen from "./screens/Home";
 import CompassScreen from './screens/Compass'
+import BorschScreen from './screens/Borsch'
+
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
 const MainStack = createStackNavigator(
@@ -9,7 +11,7 @@ const MainStack = createStackNavigator(
     Home: {
         screen: HomeScreen,
         navigationOptions: {
-          headerTitle: 'Show Expo',
+          header: () => null,
         },
     },
     Map: {
@@ -23,10 +25,16 @@ const MainStack = createStackNavigator(
       navigationOptions: {
         headerTitle: 'Compass'
       }
+    },
+    Borsch: {
+      screen: BorschScreen,
+      navigationOptions: {
+        headerTitle: 'Borsch'
+      }
     }
   },
   {
-    initialRouteName: "Compass",
+    initialRouteName: "Home",
     navigationOptions: {
       headerTintColor: "#a41034",
       headerStyle: {
